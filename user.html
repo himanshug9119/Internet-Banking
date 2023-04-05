@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel = "stylesheet" href="user.css">
+
+  </head>
+  <body>
+    <center><big><h2>Customer Page</h2></big></center><br>
+
+    <center><button onclick="document.getElementById('id01').style.display='block'" style="width: auto">Debit</button></center><br>
+    <center><button onclick="document.getElementById('id02').style.display='block'"style="width: auto">Credit</button></center><br>
+    <center><button onclick="document.getElementById('id03').style.display='block'"style="width: auto">Change Password</button></center><br>
+    <center><button onclick="document.getElementById('id04').style.display='block'"style="width: auto" ondblclick="displayblc()">Display Balance</button></center><br>
+
+    <div id="id01" class="modal1">
+      <form class="modal-content animate" >
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <img src="./photo5.jpg" alt="Avatar" class="avatar" />
+        </div>
+
+        <div class="container">
+      
+            <label for="debit"><b>Amount to be Debited</b></label>
+            <input id = "paymoneym" type="number" placeholder="Enter amount" name="debit" required>
+
+          <button type="submit" onclick="paymoney()">Debit Money</button>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" >Cancel </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="id02" class="modal2">
+      <form class="modal-content animate">
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id02').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <img src="./photo5.jpg" alt="Avatar" class="avatar" />
+        </div>
+
+        <div class="container">
+      
+            <label  for="credit"><b>Amount to be Credited</b></label>
+            <input id= "addmon" type="number" placeholder="Enter amount" name="credit" required>
+
+          <button type="submit" onclick="addmoney()" >Credit Money</button>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn"> Cancel </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="id03" class="modal3">
+      <form class="modal-content animate" >
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal" >&times;</span>
+          <img src="./photo5.jpg" alt="Avatar" class="avatar" />
+        </div>
+
+        <div class="container">
+            <label for="psw"><b>Old Password</b></label>
+            <input id="oldpwd" type="password" placeholder="Enter Password" name="psw" required>
+            <label for="psw"><b>New Password</b></label>
+            <input id="newpwd1" type="password" placeholder="Enter New Password" name="psw" required>
+            <label for="psw"><b>Confirm New Password</b></label>
+            <input  id="newpwd2" type="password" placeholder="Enter New Password" name="psw" required>
+
+          <button type="submit" onclick="changepwd2()">Change Password onclick</button>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn"> Cancel </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="home.js" charset="UTF-8"></script>
+  </body>
+</html>

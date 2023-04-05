@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel = "stylesheet" href="admin.css">
+
+  </head>
+  <body>
+    <center><big><h2>Admin Page</h2></big></center><br>
+
+    <center><button onclick="document.getElementById('id01').style.display='block'" style="width: auto">Add User</button></center><br>
+    <center><button onclick="document.getElementById('id02').style.display='block'"style="width: auto">Delete User</button></center><br>
+    <center><button onclick="document.getElementById('id03').style.display='block'"style="width: auto">Change Password</button></center><br>
+    <!-- <center><button onclick="document.getElementById('id04').style.display='block'"style="width: auto" ondblclick="display2()">Display</button></center><br> -->
+
+    <div id="id01" class="modal1">
+      <form class="modal-content animate"  >
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <img src="./photo5.jpg" alt="Avatar" class="avatar" />
+        </div>
+
+        <div class="container">
+            <label for="name"><b>Name</b></label>
+            <input id="name" type="text" placeholder="Enter Name" name="name" required>
+      
+            <label for="username"><b>Username</b></label>
+            <input id="username" type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="password"><b>Password</b></label>
+            <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+      
+            <label for="account"><b>Account No.</b></label>
+            <input id="account" type="number" placeholder="Enter Account No." name="account" required>
+            
+            <label for="contact"><b>Contact No.</b></label>
+            <input id="contact" type="number" placeholder="Enter Contact No." name="cnt" required>
+      
+            <label for="balance"><b>Balance</b></label>
+            <input id="balance" type="number" placeholder="Enter Initial Balance" name="blc" required>
+
+          <button type="submit" onclick="add_user()"><big>Add User</big> </button>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn" >Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="id02" class="modal2">
+      <form class="modal-content animate"  >
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal" >&times;</span>
+          <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar" /> -->
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input id="usenam" type="text" placeholder="Enter Username" name="uname" required />
+          <label for="account"><b>Account no.</b></label>
+          <input id="accnum" type="number" placeholder="Enter Account No" name="account" required />
+
+          <button type="submit" onclick="delete_user()"><big>Delete User</big></button>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id02').style.display='none'"
+            class="cancelbtn"> Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="id03" class="modal3">
+      <form class="modal-content animate" >
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal" >&times;</span>
+        </div>
+
+        <div class="container">
+            <label for="psw"><b>Old Password</b></label>
+            <input id="oldpwda" type="password" placeholder="Enter Password" name="psw" required>
+            <label for="psw"><b>New Password</b></label>
+            <input id="newpwd1a" type="password" placeholder="Enter New Password" name="psw" required>
+            <label for="psw"><b>Confirm New Password</b></label>
+            <input id="newpwd2a" type="password" placeholder="Enter New Password" name="psw" required>
+
+          <button type="submit" onclick="changepwd1()">Change Password</button>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn"> Cancel </button>
+        </div>
+      </form>
+    </div>
+
+    
+
+        <div class="containerxyz">
+          <button type="submit" onclick="display2()">Display</button>
+        </div>
+
+    <!-- <script src="admin.js" charset="UTF-8"></script> -->
+    <script src="home.js" charset="UTF-8"></script>
+  </body>
+</html>

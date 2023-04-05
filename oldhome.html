@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link href="./home.css" rel="stylesheet" >
+  <!------ Include the above in your HEAD tag ---------->
+  <title>ICD Net Banking</title>
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+	</div>
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <a class="navbar-brand" href="#"><img src="./Bank logo.png" alt="logo" height="45px"><strong> ICD Bank</strong> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto topnav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./oldhome.html"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./aboutUs.html"><strong>About us</strong></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./loan.html"><strong>Apply Loan</strong></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./customercare.html"><strong>Customer Care</strong></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="./contactus.html"><strong>Contact us</strong></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link btn btn-warning  text-white" type="button" href="admin.html"  data-toggle="modal" data-target="#myModal1">Admin</a>                  
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link btn btn-danger text-white" type="button" href="#"  data-toggle="modal" data-target="#myModal2">Customer</a>
+                </li>
+            </ul>
+        </div>
+
+            <!-- The Modal -->
+    <div class="modal" id="myModal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Admin Sign In</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <label class="sr-only" for="usrname">Username</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                            </div>
+                            <input id = "username1" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+
+                        <label class="sr-only" for="Password">Password</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input id="password1" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" onclick="verifyAdmin()" >Sign In</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal2">
+      <div class="modal-dialog">
+          <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                  <h4 class="modal-title">Customer Sign In</h4>
+                  <button type="button" class="close" data-dismiss="modal">×</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                  <form>
+                      <label class="sr-only" for="username2">Username</label>
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                          </div>
+                          <input id = "username2" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+
+                      <label class="sr-only" for="Password">Password</label>
+                      <div class="input-group mb-2">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                          </div>
+                          <input id="Password2" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                      </div>
+                  </form>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary" onclick="verifyUser()" >Sign In</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+          </div>
+      </div>
+  </div>
+        
+    </nav>
+</div>
+
+
+<br>
+<img src="./photo1.jpg" alt="Load ho rha h" style="float: right;">
+<p style="margin-left: 20px;"><strong>Welcome to ICD Net Banking</strong><br> Your money is safe with us <br>Enjoy hassle free service<br>
+</p>
+<br>
+<p style="margin-left: 20px;"><strong>Important Security Information</strong><br>
+<ul>
+  <li>Before logging in, Verify that you are using verified website of respective bank.</li>
+  <li>Never share your User ID and password with strangers.</li>
+  <li>Do not enter sensitive information in any pop up window.</li>
+  <li>Verify the site's security certificate </li>
+</ul></p>
+<br>
+<p style="margin-left: 20px;"><strong>Digital Security</strong><br>https://icd.com has been verified by Entrust. The communication of your private information from any adrress beginning with https is encrypted and secured.</p>
+</br>
+<p style="margin-left: 20px;"><strong><a href="https://www.google.com/maps/place/IIIT-Vadodara+-+International+Campus+Diu+(IIITV-ICD)/@20.7185183,70.9367043,17z/data=!3m1!4b1!4m5!3m4!1s0x3be31d322e444609:0x77ec7c0f229a6f5b!8m2!3d20.7185133!4d70.938893">Click here to View location</a></strong></p>
+<p style="margin-left: 20px;"><strong><a href="http://diu.iiitvadodara.ac.in/">Click here to Visit institute website</a></strong></p>
+
+<br><br><br>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+<footer>
+  <div class="footer-gray container-fluid"> 
+    <div class="footer-custom">
+      <div class="footer-lists">
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Customer Care no</h6>
+          <ul class="ftr-links-sub">
+            <li>800-952-5592</li>
+          </ul>
+          <h6 class="ftr-hdr">For queries contact</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="http://www.art.fr" rel="nofollow">icd@gmail.com</a></li>
+            <li><a href="https://www.art.co.uk" rel="nofollow">iiiticd@gmail.com</a></li>
+          </ul>
+        </div>
+        <!--/.footer-list-wrap-->
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Customer Service</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="/help/talktous.html" rel="nofollow">Withdraw</a></li>
+            <li><a href="/help/placingorders.html" rel="nofollow">View current balance</a></li>
+            <li><a href="/help/shipping.html" rel="nofollow">Deposit</a></li>
+            <li><a href="/help/shippingreturns.html" rel="nofollow">Apply for loan</a></li>
+            <li><a href="/help/international-shipping.html" rel="nofollow">Customer Care</a></li>
+            <li><a href="/help/faq.html" rel="nofollow">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Admin service</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="/asp/aboutus/default-asp/_/posters.htm" rel="nofollow">Create bank account</a></li>
+            <li><a href="http://corporate.art.com/careers" rel="nofollow">Remove bank account</a></li>
+            <li><a href="/asp/landing/artistrising" rel="nofollow">View customer list</a></li>
+            <!-- <li><a href="/~/art-for-business" rel="nofollow">Business &amp; Trade Sales</a></li>
+            <li><a href="http://affiliates.art.com/index.aspx" rel="nofollow">Affiliate Program</a></li>
+            <li><a href="/catalog" rel="nofollow"><strong>Shop Our Catalog</strong></a></li>
+            <li><a href="http://blog.art.com" rel="nofollow">ART.COM BLOG</a></li> -->
+          </ul>
+        </div>
+        <!--/.footer-list-wrap-->
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">About us</h6>
+          <ul class="ftr-links-sub">
+            <art:content rule="!loggedin">
+              <li class="ftr-Login"><span class="link login-trigger">ICD Bank is at your service to provide you with all essential needs.</span></li>
+              <li><span class="link" onclick="link('/asp/secure/your_account/track_orders-asp/_/posters.htm')">r</span></li>
+            </art:content>
+            <art:content rule="loggedin">
+              <li class="ftr-Login"><span class="link ftr-access-my-account">Access My Account</span></li>
+              <li><span class="link" onclick="window.location.href = getProfileKey() + '?pagetype=oh';"></span></li>
+            </art:content>
+          </ul>
+        </div>
+        <!--/.footer-list-wrap-->
+      </div>
+      <!--/.footer-lists-->
+      <div class="footer-email">
+        <h6 class="ftr-hdr">Join us at other platforms also</h6>
+        <div id="ftr-email" class="ftr-email-form">
+          <form id="ftrEmailForm" method="post" action="http://em.art.com/pub/rf">
+            <div class="error">Please enter a valid email address</div>
+            <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address" />
+            <!--
+                -->
+            <input type="submit" class="button" value="SUBMIT" />
+            <input type="hidden" name="country_iso2" value="">
+            <input type="hidden" name="language_iso2" value="en">
+            <input type="hidden" name="site_domain" value="art.com">
+            <input type="hidden" name="email_acq_source" value="01-000001">
+            <input type="hidden" name="email_acq_date" value="" id="ftr-email-date">
+            <input type="hidden" name="brand_id" value="ART">
+            <input type="hidden" name="ri" value="X0Gzc2X%3DWQpglLjHJlYQGnp51yrMf2qXdC9tjU8pzgMtwfYzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DWQpglLjHJlYQGnyLSq2fzdkuzdzglHMsUhgeNzaSgkk">
+          </form>
+        </div>
+        <!--/.ftr-email-form-->
+        <div class="ftr-email-privacy-policy"></div>
+      </div>
+      <!--/.footer-email-->
+      <div class="footer-social">
+        <h6 class="ftr-hdr">Follow Us</h6>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/art.com" title="Facebook" onclick="_gaq.push(['_trackSocial', 'Facebook', 'Follow', 'Footer', 'undefined', 'True']);">
+              <img width="24" height="24" alt="Like us on Facebook" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/fb.png">
+            </a>
+          </li>
+          <li>
+            <a href="https://plus.google.com/108089796661280870153" title="Google+" onclick="_gaq.push(['_trackSocial', 'GooglePlus', 'Follow', 'Footer', 'undefined', 'True']);">
+              <img width="24" height="24" alt="Follow us on Google+" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/gplus.png">
+            </a>
+          </li>
+          <li>
+            <a href="https://pinterest.com/artdotcom/" target="_blank">
+              <img width="24" height="24" alt="Follow us on Pinterest" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/pin-badge.png">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://instagram.com/artdotcom/">
+              <img width="24" height="24" alt="Follow us on Instagram" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/instagram-badge.png">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/artdotcom" title="Twitter" onclick="_gaq.push(['_trackSocial', 'Twitter', 'Follow', 'Footer', 'undefined', 'True']);">
+
+              <img width="67" alt="Follow us on Twitter" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/twitter.png">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--/.footer-social-->
+    <div class="footer-legal">
+      <p>&copy; ICD.com All Rights Reserved. | <a href="/help/privacy-policy.html" rel="nofollow">Privacy Policy</a> | <a href="/help/terms-of-use.html" rel="nofollow">Terms of Use</a></p>
+      <p>Copyright © iiiticd <a href="#">CS201</a> All rights reserved</p>
+      <p>Various aspects of this website are covered by issued US patent No. 7,973,796 and other pending patent applications.</p>
+    </div>
+    <!--/.footer-legal-->
+    <div class="footer-payment">
+      <ul>
+        <li class="ftr-stella">
+          <span title="Stella Service" onclick="openLink('http://www.stellaservice.com/profile/Art.com/')"></span>
+        </li>
+        <li>
+          <span onclick="clickTrack(); return false;" onmouseover="this.style.cursor='pointer'"><img border="0" alt="HACKER SAFE certified sites prevent over 99.9% of hacker crime." src="https://images.scanalert.com/meter/www.art.com/31.gif"></span>
+        </li>
+        <li class="ftr-bbb">
+          <span title="BBB" onclick="openLink('http://www.bbb.org/raleigh-durham/business-reviews/art-suppliers/artcom-inc-in-raleigh-nc-5001914')"></span>
+        </li>
+      </ul>
+    </div>
+    <!--/.footer-payment-->
+  </div>
+  <!--/.footer-custom-->
+</div>
+<!--/.footer-gray-->
+</footer>
+<!-- <footer>
+  <div class="content">
+    <div class="left box">
+      <div class="upper">
+        <div class="topic">About us</div>
+        <p>ICD bank is at your service to provide you with all essential needs.<br>Useful links are get user id , saving account ,PPF ,Media Gallery,Credit Card</p>
+      </div>
+      <div class="lower">
+        <div class="topic">Contact us</div>
+        <div class="phone">
+          <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
+        </div>
+        <div class="email">
+          <a href="#"><i class="fas fa-envelope"></i>icd@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="middle box">
+      <div class="topic">Our Services</div>
+      <div><a href="#">Deposit</a></div>
+      <div><a href="#">Withdraw</a></div>
+      <div><a href="#">View current balance</a></div>
+      <div><a href="#">Check status of interest</a></div>
+      <div><a href="#">Apply for loan</a></div>
+      <div><a href="#">Customer Care</a></div>
+    </div>
+    <div class="right box">
+      <div class="topic">Join us at other platforms also</div>
+      <form action="#">
+        <input type="text" placeholder="Enter email address">
+        <input type="submit" name="" value="Send">
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="bottom">
+    <p>Copyright © iiiticd <a href="#">CS201</a> All rights reserved</p>
+  </div>
+</footer> -->
+<script src="home.js" charset="UTF-8"></script>
+  
+</body>
+</html>
